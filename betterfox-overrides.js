@@ -1,3 +1,5 @@
+// Betterfox Overrides
+
 // PREF: remove sponsored content on New Tab page
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // Sponsored shortcuts 
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Recommended by Pocket

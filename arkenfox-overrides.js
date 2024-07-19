@@ -1,3 +1,5 @@
+// Arkenfox Overrides
+
 // Let google scan files for malware
 user_pref("browser.safebrowsing.downloads.remote.enabled", true);
 
