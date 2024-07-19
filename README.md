@@ -1,7 +1,7 @@
 # Firefox user.js
 This a repository that is setup to combine arkenfox and betterfox configs using override files and a config file
 
-# config.jsonc
+# config.py
 This file specifies what files are included in the final user.js
 
 # setup.py
