@@ -1,6 +1,5 @@
 // Betterfox Overrides
-// Wiki:
-// https://github.com/yokoffing/Betterfox/tree/main
+// Wiki: https://github.com/yokoffing/Betterfox/tree/main
 
 // Disable signons
 user_pref("signon.rememberSignons", false); // disable password manager
