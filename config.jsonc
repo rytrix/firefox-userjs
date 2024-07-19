@@ -1,0 +1,11 @@
+{
+    "files": [
+        //"arkenfox/arkenfox/user.js",
+        //"arkenfox-overrides.js",
+        "betterfox/betterfox/Peskyfox.js",
+        "betterfox/betterfox/Fastfox.js",
+        "betterfox/betterfox/Smoothfox.js",
+        "betterfox/betterfox/Securefox.js",
+        "betterfox-overrides.js"
+    ]
+}

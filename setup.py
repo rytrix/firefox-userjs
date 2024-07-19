@@ -2,6 +2,8 @@ from urllib.request import urlretrieve
 import zipfile
 import os
 import shutil
+import json
+import re
 
 
 def read_file(file: str):
@@ -58,14 +60,14 @@ def main():
 
     userjs = ""
 
-    userjs += read_file("arkenfox/arkenfox/user.js")
-    userjs += read_file("arkenfox-overrides.js")
+    with open("config.jsonc", "r") as handle:
+        text = handle.read()
+        files = json.loads(re.sub("//.*", "", text, flags=re.MULTILINE))
 
-    userjs += read_file("betterfox/betterfox/Peskyfox.js")
-    userjs += read_file("betterfox/betterfox/Fastfox.js")
-    userjs += read_file("betterfox/betterfox/Smoothfox.js")
-    userjs += read_file("betterfox/betterfox/Securefox.js")
-    userjs += read_file("betterfox-overrides.js")
+    files = files["files"]
+
+    for file in files:
+        userjs += read_file(file)
 
     write_file("user.js", userjs)
 
