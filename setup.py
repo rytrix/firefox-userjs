@@ -2,8 +2,7 @@ from urllib.request import urlretrieve
 import zipfile
 import os
 import shutil
-import json
-import re
+import sys
 
 
 def read_file(file: str):
@@ -35,36 +34,37 @@ def download_release_and_unzip(url: str, filename: str, directory: str):
         os.remove(filename)
 
 
-def get_arkenfox():
+def get_arkenfox(url: str):
     # Updated July 19, 2024
-    url = "https://github.com/arkenfox/user.js/archive/refs/tags/126.1.zip"
     filename = "arkenfox.zip"
     directory = "arkenfox"
     download_release_and_unzip(url, filename, directory)
 
 
-def get_betterfox():
+def get_betterfox(url: str):
     # Updated July 19, 2024
-    url = "https://github.com/yokoffing/Betterfox/archive/refs/tags/128.0.zip"
     filename = "betterfox.zip"
     directory = "betterfox"
     download_release_and_unzip(url, filename, directory)
 
 
 def main():
-    redownload = False
+    if len(sys.argv) > 1 and sys.argv[1] == "refresh":
+        redownload = True
+    else:
+        redownload = False
+
+    # import config.py
+    from config import config
+
     if not os.path.isdir("arkenfox") or redownload:
-        get_arkenfox()
+        get_arkenfox(config["arkenfox"])
     if not os.path.isdir("betterfox") or redownload:
-        get_betterfox()
+        get_betterfox(config["betterfox"])
 
     userjs = ""
 
-    with open("config.jsonc", "r") as handle:
-        text = handle.read()
-        files = json.loads(re.sub("//.*", "", text, flags=re.MULTILINE))
-
-    files = files["files"]
+    files = config["files"]
 
     for file in files:
         userjs += read_file(file)
