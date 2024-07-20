@@ -16,3 +16,7 @@ Download Mozilla Firefox
 1. Open Firefox. In the URL bar, type about:profiles and press Enter.
 2. For the profile you want to use (or use default), click Open Folder in the Root Directory section.
 3. Move the user.js file into the folder.
+
+# Arkenfox and Betterfox (both under MIT licenses)
+https://github.com/arkenfox/user.js
+https://github.com/yokoffing/BetterFox
