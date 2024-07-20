@@ -11,7 +11,7 @@ This file specifies what links arkenfox and betterfox are pulled from and what f
 # setup.py
 Grabs github releases of arkenfox and betterfox if they are not present, then combines each specified file from the config.jsonc file into a user.js file
 
-# Install user.js
+# Installing the user.js
 Download Mozilla Firefox
 1. Open Firefox. In the URL bar, type about:profiles and press Enter.
 2. For the profile you want to use (or use default), click Open Folder in the Root Directory section.
