@@ -19,4 +19,5 @@ Download Mozilla Firefox
 
 # Arkenfox and Betterfox (both under MIT licenses)
 https://github.com/arkenfox/user.js
+
 https://github.com/yokoffing/BetterFox
