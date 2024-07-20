@@ -1,5 +1,5 @@
 # Firefox user.js
-This a repository that is setup to combine arkenfox and betterfox configs using override files and a config file
+This is a repository that is setup to combine arkenfox and betterfox configs and overrides by combining them with a python script/configuration file
 
 The goal of this user.js configuration is to disable bloat/noisey features, tracking and generally enable security features by default. The goal of this configuration is not maximum privacy at the expense of usability, but instead focusing on security and usability as a priority, if you want privacy use TOR or Mulvad. With that said privacy features that don't effect usability much are enabled ootb.
 
