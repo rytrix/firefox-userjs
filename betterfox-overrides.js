@@ -54,5 +54,6 @@ user_pref("media.hardware-video-decoding.force-enabled", true);
 // Stop webrtc leaks
 userpref("media.peerconnection.enabled", false);
 
-// Use system default DNS
-userpref("network.dns.disabled", true)
+// Use system default DNS (for vpns)
+user_pref("network.trr.mode", 4); // This is for the dns options at the bottom of security
+user_pref("network.trr.max-fails", 5); // lower max attempts to use DoH
