@@ -1,4 +1,5 @@
 config = {
+    # Updated July 19, 2024
     "arkenfox": "https://github.com/arkenfox/user.js/archive/refs/tags/126.1.zip",
     "betterfox": "https://github.com/yokoffing/Betterfox/archive/refs/tags/128.0.zip",
     "files": [

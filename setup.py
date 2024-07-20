@@ -35,14 +35,12 @@ def download_release_and_unzip(url: str, filename: str, directory: str):
 
 
 def get_arkenfox(url: str):
-    # Updated July 19, 2024
     filename = "arkenfox.zip"
     directory = "arkenfox"
     download_release_and_unzip(url, filename, directory)
 
 
 def get_betterfox(url: str):
-    # Updated July 19, 2024
     filename = "betterfox.zip"
     directory = "betterfox"
     download_release_and_unzip(url, filename, directory)
