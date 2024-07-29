@@ -1,6 +1,9 @@
 // Betterfox Overrides
 // Wiki: https://github.com/yokoffing/Betterfox/tree/main
 
+// Check certificates are good
+user_pref("security.OCSP.enabled", 1);
+
 // Disable signons
 user_pref("signon.rememberSignons", false); // disable password manager
 user_pref("extensions.formautofill.addresses.enabled", false); // disable address manager
