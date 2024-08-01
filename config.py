@@ -9,6 +9,7 @@ config = {
         "betterfox/betterfox/Fastfox.js",
         "betterfox/betterfox/Smoothfox.js",
         "betterfox/betterfox/Securefox.js",
-        "betterfox-overrides.js"
+        "betterfox-overrides.js",
+        # "laptop-overrides.js",
     ]
 }
