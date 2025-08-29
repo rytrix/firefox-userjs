@@ -1,5 +1,8 @@
-// Betterfox Overrides
+// Betterfoxtrui Overrides
 // Wiki: https://github.com/yokoffing/Betterfox/tree/main
+user_pref("browser.contentblocking.category", "strict");
+user_pref("privacy.trackingprotection.allow_list.baseline.enabled", false);
+user_pref("privacy.trackingprotection.allow_list.convenience.enabled", false);
 
 // Check certificates are good
 user_pref("security.OCSP.enabled", 1);
@@ -52,11 +55,27 @@ user_pref("browser.uidensity", 1);
 
 // Hardware encoding/decoding on linux
 // user_pref("media.ffmpeg.vaapi.enabled", true);
-user_pref("media.hardware-video-decoding.force-enabled", true);
+// user_pref("media.hardware-video-decoding.force-enabled", true);
 
 // Stop webrtc leaks
-userpref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.enabled", false);
 
 // Use system default DNS (for vpns)
-user_pref("network.trr.mode", 4); // This is for the dns options at the bottom of security
-user_pref("network.trr.max-fails", 5); // lower max attempts to use DoH
+// user_pref("network.trr.mode", 4); // This is for the dns options at the bottom of security
+// user_pref("network.trr.max-fails", 5); // lower max attempts to use DoH
+
+// PREF: do not allow embedded tweets, Instagram, Reddit, and Tiktok posts
+user_pref("urlclassifier.trackingSkipURLs", "");
+user_pref("urlclassifier.features.socialtracking.skipURLs", "");
+
+// PREF: disable all DRM content
+user_pref("media.eme.enabled", false);
+
+// PREF: hide the UI setting; this also disables the DRM prompt (optional)
+user_pref("browser.eme.ui.enabled", false);
+
+// Stop logging me out of discord
+user_pref("privacy.sanitize.sanitizeOnShutdown", false);
+
+// Do not fingerprint me more plz
+user_pref("privacy.globalprivacycontrol.enabled", false);
